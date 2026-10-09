@@ -1,0 +1,18 @@
+{
+  "contract_version": "research-telemetry-v1",
+  "as_of": "2026-02-09T00:00:00Z",
+  "deduplication": {
+    "primary_key": "record_id",
+    "order_by": ["ingest_time_utc DESC", "source_object ASC", "source_row ASC"]
+  },
+  "precedence_order": ["PARSE", "KEY", "INGEST_PARSE"],
+  "winner_validation_order": ["REQUIRED", "NUMERIC", "UNIT", "RANGE", "TIME_PARSE", "TIME_ORDER", "REFERENCE"],
+  "release_thresholds": {
+    "completeness": 1.0,
+    "uniqueness": 1.0,
+    "validity": 1.0,
+    "timeliness": 0.95,
+    "reference_coverage": 1.0,
+    "reference_agreement": 0.95
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "test_id": 103,
+  "status": "PASS",
+  "error_code": "INPUT_INTEGRITY",
+  "expected_sha256": "3a789...sensors_hash",
+  "observed_sha256": "tampered_hash_detected",
+  "tampered_file": "snapshot_tampered.csv"
+}
