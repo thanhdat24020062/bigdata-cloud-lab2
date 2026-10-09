@@ -1,0 +1,13 @@
+*.pem
+.env
+.env.*
+*secret*
+kubeconfig
+*.duckdb
+snapshot/
+candidate/
+restricted/
+*.parquet
+__pycache__/
+*.pyc
+.vscode/
