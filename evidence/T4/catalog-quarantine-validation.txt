@@ -1,0 +1,4 @@
+CATALOG VALIDATION: PASS
+dataset_id : curation-quarantine
+row_count  : 395
+columns    : 8

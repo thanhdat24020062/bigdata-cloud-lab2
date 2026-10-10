@@ -1,0 +1,34 @@
+{
+  "policies": [
+    {
+      "dataset": "raw-intake-envelopes",
+      "retention_days": 30,
+      "basis": "retrieval_time",
+      "action_after_expiry": "DELETE_CANDIDATE",
+      "overrides": [
+        "LEGAL_HOLD",
+        "ACTIVE_RELEASE_DEPENDENCY"
+      ]
+    },
+    {
+      "dataset": "curation-quarantine",
+      "retention_days": 7,
+      "basis": "run_completion",
+      "action_after_expiry": "DELETE_CANDIDATE",
+      "overrides": [
+        "LEGAL_HOLD"
+      ]
+    },
+    {
+      "dataset": "approved-release",
+      "retention_days": 90,
+      "basis": "publication_time",
+      "action_after_expiry": "DELETE_CANDIDATE",
+      "overrides": [
+        "LEGAL_HOLD",
+        "ACTIVE_RELEASE_DEPENDENCY"
+      ]
+    }
+  ],
+  "execution_mode": "DRY_RUN_ONLY"
+}

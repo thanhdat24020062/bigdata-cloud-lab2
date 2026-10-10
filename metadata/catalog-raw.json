@@ -1,0 +1,115 @@
+{
+  "dataset_id": "raw-intake-envelopes",
+  "title": "Raw Intake Observation Envelopes",
+  "purpose": "Staged representation of all physical Lab 2 observation records, preserving source identity, source row, source hash, parse status, and raw payload for complete accounting and provenance.",
+  "owner": "bd-g01",
+  "steward": "Role D - Metadata Governance",
+  "classification": "internal",
+  "allowed_use": "Synthetic teaching data only",
+  "location": "/work/envelopes.csv",
+  "schema_version": "research-telemetry-v1",
+  "as_of": "2026-02-09T00:00:00Z",
+  "row_count": 10205,
+  "columns": [
+    {
+      "name": "record_id",
+      "type": "VARCHAR",
+      "meaning": "Logical record identifier supplied by the source when available.",
+      "unit": null,
+      "nullable": true
+    },
+    {
+      "name": "sensor_id",
+      "type": "VARCHAR",
+      "meaning": "Identifier of the source sensor.",
+      "unit": null,
+      "nullable": true
+    },
+    {
+      "name": "event_time",
+      "type": "VARCHAR",
+      "meaning": "Original event timestamp text from the source prior to normalization.",
+      "unit": null,
+      "nullable": true
+    },
+    {
+      "name": "ingest_time",
+      "type": "VARCHAR",
+      "meaning": "Original ingestion timestamp text from the source prior to normalization.",
+      "unit": null,
+      "nullable": true
+    },
+    {
+      "name": "reading",
+      "type": "VARCHAR",
+      "meaning": "Original source reading prior to numeric parsing and validation.",
+      "unit": null,
+      "nullable": true
+    },
+    {
+      "name": "unit",
+      "type": "VARCHAR",
+      "meaning": "Original measurement unit supplied by the source.",
+      "unit": null,
+      "nullable": true
+    },
+    {
+      "name": "operator_email",
+      "type": "VARCHAR",
+      "meaning": "Operator email field supplied by the synthetic source dataset.",
+      "unit": null,
+      "nullable": true
+    },
+    {
+      "name": "source_object",
+      "type": "VARCHAR",
+      "meaning": "S3 object location of the original source record.",
+      "unit": null,
+      "nullable": false
+    },
+    {
+      "name": "source_row",
+      "type": "BIGINT",
+      "meaning": "Physical row number within the source object.",
+      "unit": null,
+      "nullable": false
+    },
+    {
+      "name": "source_sha256",
+      "type": "VARCHAR",
+      "meaning": "SHA-256 digest of the original source object.",
+      "unit": null,
+      "nullable": false
+    },
+    {
+      "name": "parse_ok",
+      "type": "BOOLEAN",
+      "meaning": "Indicates whether the source record was parsed successfully.",
+      "unit": null,
+      "nullable": false
+    },
+    {
+      "name": "raw_payload",
+      "type": "VARCHAR",
+      "meaning": "Preserved raw representation of the physical source record.",
+      "unit": null,
+      "nullable": false
+    }
+  ],
+  "input_manifest_sha256": "77dacfdb5a8b4e82fb2316990972de731a51b31f9fc052d739d0dea78e992331",
+  "contract_sha256": "2ae350ef4145859db62547c69cc21814cca43320d2e998c8d5a18deaf206a02a",
+  "code_sha256": "7801b24ec80505af059069036fee6da6d936fdafcdc69ced1a8a162735ba87fd",
+  "quality_report": "/work/quality_before.json",
+  "retention": {
+    "retention_days": 30,
+    "basis": "retrieval_time",
+    "legal_hold_override": true,
+    "active_dependency_override": true
+  },
+  "provenance": {
+    "artifact_sha256": "28d633f05801d9c4e4a4de02a6a71d8227152a26df4e22151f2b29cda9f50cc7",
+    "raw_record_count": 10205,
+    "source_store_id": "bd-g01-objects",
+    "source_bucket": "research-raw"
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "dataset_id": "curation-quarantine",
+  "title": "Curation Quarantine Dataset",
+  "purpose": "Restricted curation output containing physical records rejected during parsing, key validation, ingest validation, or winner validation, together with rejection reasons and provenance.",
+  "owner": "bd-g01",
+  "steward": "Role D - Metadata Governance",
+  "classification": "restricted-internal",
+  "allowed_use": "Synthetic teaching data only",
+  "location": "/work/candidate/quarantine.csv",
+  "schema_version": "research-telemetry-v1",
+  "as_of": "2026-02-09T00:00:00Z",
+  "row_count": 395,
+  "columns": [
+    {
+      "name": "source_object",
+      "type": "VARCHAR",
+      "meaning": "S3 object location of the original source record.",
+      "unit": null,
+      "nullable": false
+    },
+    {
+      "name": "source_row",
+      "type": "BIGINT",
+      "meaning": "Physical row number within the original source object.",
+      "unit": null,
+      "nullable": false
+    },
+    {
+      "name": "source_sha256",
+      "type": "VARCHAR",
+      "meaning": "SHA-256 digest of the original source object.",
+      "unit": null,
+      "nullable": false
+    },
+    {
+      "name": "record_id",
+      "type": "VARCHAR",
+      "meaning": "Logical record identifier when available.",
+      "unit": null,
+      "nullable": true
+    },
+    {
+      "name": "stage",
+      "type": "VARCHAR",
+      "meaning": "Pipeline stage at which the record was quarantined.",
+      "unit": null,
+      "nullable": false
+    },
+    {
+      "name": "primary_reason",
+      "type": "VARCHAR",
+      "meaning": "Primary reason the record failed validation.",
+      "unit": null,
+      "nullable": false
+    },
+    {
+      "name": "all_reasons",
+      "type": "VARCHAR",
+      "meaning": "Complete set of validation failure reasons associated with the quarantined record.",
+      "unit": null,
+      "nullable": false
+    },
+    {
+      "name": "raw_payload",
+      "type": "VARCHAR",
+      "meaning": "Preserved raw payload of the rejected physical record.",
+      "unit": null,
+      "nullable": false
+    }
+  ],
+  "input_manifest_sha256": "77dacfdb5a8b4e82fb2316990972de731a51b31f9fc052d739d0dea78e992331",
+  "contract_sha256": "2ae350ef4145859db62547c69cc21814cca43320d2e998c8d5a18deaf206a02a",
+  "code_sha256": "7801b24ec80505af059069036fee6da6d936fdafcdc69ced1a8a162735ba87fd",
+  "quality_report": "/work/quality_before.json",
+  "retention": {
+    "retention_days": 7,
+    "basis": "run_completion",
+    "legal_hold_override": true
+  },
+  "provenance": {
+    "curation_run_id": "8c68ba1d",
+    "artifact_sha256": "f40c76db5304c76a61380edb7b6dd2c5476d132a99407e5b504539579b2c8e56",
+    "quarantine_record_count": 395,
+    "restricted_output": true
+  }
+}
