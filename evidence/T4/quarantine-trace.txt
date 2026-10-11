@@ -1,0 +1,49 @@
+ubuntu@ip-172-31-26-228:~$ sudo k3s kubectl -n bd-g01 exec curate -- python -c "
+import duckdb
+p='/work/candidate/quarantine.csv'
+r=duckdb.sql(f'''
+SELECT
+  record_id,
+  source_object,
+  source_row,
+  source_sha256,
+  stage,
+  primary_reason,
+  all_reasons
+FROM read_csv_auto('{p}')
+ORDER BY source_object, source_row
+LIMIT 1
+''').fetchone()
+print(r)
+"
+('R000001', 's3://research-raw/lab2/inputs/batch-01/observations_a.csv', 1, '5157418915d867980fac8d84551a8b856bba1669ca2e33cef91a15ee82101aea', 'WINNER_VALIDATION', 'REQUIRED', 'REQUIRED|NUMERIC|RANGE')
+
+ubuntu@ip-172-31-26-228:~$ sudo k3s kubectl -n bd-g01 exec curate -- python -c "
+import duckdb
+
+q='/work/candidate/quarantine.csv'
+raw='/work/envelopes.csv'
+
+r=duckdb.sql(f'''
+SELECT
+  q.record_id,
+  q.source_object,
+  q.source_row,
+  q.source_sha256,
+  q.stage,
+  q.primary_reason,
+  q.all_reasons,
+  r.parse_ok
+FROM read_csv_auto('{q}') q
+JOIN read_csv_auto('{raw}') r
+  ON q.source_object = r.source_object
+ AND q.source_row = r.source_row
+ AND q.source_sha256 = r.source_sha256
+ORDER BY q.source_object, q.source_row
+LIMIT 1
+''').fetchone()
+
+print(r)
+"
+100% ▕██████████████████████████████████████▏ (00:00:02.27 elapsed)
+('R000001', 's3://research-raw/lab2/inputs/batch-01/observations_a.csv', 1, '5157418915d867980fac8d84551a8b856bba1669ca2e33cef91a15ee82101aea', 'WINNER_VALIDATION', 'REQUIRED', 'REQUIRED|NUMERIC|RANGE', True)

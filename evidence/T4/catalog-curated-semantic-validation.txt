@@ -1,0 +1,6 @@
+SEMANTIC VALIDATION: PASS
+row_count     : 9610
+columns       : 10
+output_sha256 : 17b163b27ddd5c3a2869252424b39caabef0fce78978bd94a15c9053dc36f9e4
+C01           : PASS
+C03           : PASS

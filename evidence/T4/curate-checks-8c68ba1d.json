@@ -1,0 +1,98 @@
+{
+  "run_id": "8c68ba1d",
+  "params_used": {
+    "as_of": "2026-02-09 00:00:00",
+    "min_c": -30.0,
+    "max_c": 60.0,
+    "late_s": 900,
+    "id_pattern": "R[0-9]{6}"
+  },
+  "registry_duplicate_ids": 0,
+  "output_sha256": {
+    "curated": "17b163b27ddd5c3a2869252424b39caabef0fce78978bd94a15c9053dc36f9e4",
+    "quarantine": "f40c76db5304c76a61380edb7b6dd2c5476d132a99407e5b504539579b2c8e56",
+    "duplicates": "64eed4baff8e356618572d0beb1a2f738afcd8c4cf3193ebbfd4dddd1c281568"
+  },
+  "C01": {
+    "n_raw": 10205,
+    "n_curated": 9610,
+    "n_quarantine": 395,
+    "n_duplicates": 200,
+    "raw_minus_outputs": 0,
+    "outputs_minus_raw": 0,
+    "overlap_c_q": 0,
+    "overlap_c_d": 0,
+    "overlap_q_d": 0,
+    "dup_phys_in_outputs": 0,
+    "dup_record_id_curated": 0,
+    "sum_matches": true,
+    "PASS": true
+  },
+  "C03": {
+    "columns": [
+      [
+        "record_id",
+        "VARCHAR"
+      ],
+      [
+        "sensor_id",
+        "VARCHAR"
+      ],
+      [
+        "site",
+        "VARCHAR"
+      ],
+      [
+        "event_time_utc",
+        "TIMESTAMP"
+      ],
+      [
+        "ingest_time_utc",
+        "TIMESTAMP"
+      ],
+      [
+        "temperature_c",
+        "DECIMAL(8,2)"
+      ],
+      [
+        "is_late",
+        "BOOLEAN"
+      ],
+      [
+        "source_object",
+        "VARCHAR"
+      ],
+      [
+        "source_row",
+        "BIGINT"
+      ],
+      [
+        "source_sha256",
+        "VARCHAR"
+      ]
+    ],
+    "exact_10_columns_in_order": true,
+    "no_restricted": true,
+    "PASS": true
+  },
+  "C02": {
+    "digests": {
+      "original": {
+        "curated": "9c0866d7ccf1f9726fdaf49b49d168865d637c74ba2bce6170c9e9735a3c1512",
+        "quarantine": "3b8dcea4465afd15cd4e28cf8709bd627bb544aabb720de45f5248ab97892603",
+        "duplicates": "04de27a4db6425254d53f04d430f06f5d3b390303e29baf2c016db566fd0c045"
+      },
+      "reversed": {
+        "curated": "9c0866d7ccf1f9726fdaf49b49d168865d637c74ba2bce6170c9e9735a3c1512",
+        "quarantine": "3b8dcea4465afd15cd4e28cf8709bd627bb544aabb720de45f5248ab97892603",
+        "duplicates": "04de27a4db6425254d53f04d430f06f5d3b390303e29baf2c016db566fd0c045"
+      },
+      "shuffled": {
+        "curated": "9c0866d7ccf1f9726fdaf49b49d168865d637c74ba2bce6170c9e9735a3c1512",
+        "quarantine": "3b8dcea4465afd15cd4e28cf8709bd627bb544aabb720de45f5248ab97892603",
+        "duplicates": "04de27a4db6425254d53f04d430f06f5d3b390303e29baf2c016db566fd0c045"
+      }
+    },
+    "PASS": true
+  }
+}

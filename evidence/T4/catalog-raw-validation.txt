@@ -1,0 +1,4 @@
+CATALOG VALIDATION: PASS
+dataset_id : raw-intake-envelopes
+row_count  : 10205
+columns    : 12

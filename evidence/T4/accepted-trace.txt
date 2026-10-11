@@ -1,0 +1,44 @@
+#Lấy một dòng trong 'curated.parquet'
+ubuntu@ip-172-31-26-228:~$ sudo k3s kubectl -n bd-g01 exec curate -- python -c "
+import duckdb
+p='/work/candidate/curated.parquet'
+r=duckdb.sql(f'''
+SELECT
+  record_id,
+  source_object,
+  source_row,
+  source_sha256
+FROM read_parquet('{p}')
+ORDER BY record_id
+LIMIT 1
+''').fetchone()
+print(r)
+"
+#Chứng minh có có tồn tại trong RawData
+('R000381', 's3://research-raw/lab2/inputs/batch-01/observations_a.csv', 381, '5157418915d867980fac8d84551a8b856bba1669ca2e33cef91a15ee82101aea')
+
+ubuntu@ip-172-31-26-228:~$ sudo k3s kubectl -n bd-g01 exec curate -- python -c "
+import duckdb
+
+cur='/work/candidate/curated.parquet'
+raw='/work/envelopes.csv'
+
+r=duckdb.sql(f'''
+SELECT
+  c.record_id,
+  c.source_object,
+  c.source_row,
+  c.source_sha256,
+  r.parse_ok
+FROM read_parquet('{cur}') c
+JOIN read_csv_auto('{raw}') r
+  ON c.source_object = r.source_object
+ AND c.source_row = r.source_row
+ AND c.source_sha256 = r.source_sha256
+ORDER BY c.record_id
+LIMIT 1
+''').fetchone()
+
+print(r)
+"
+('R000381', 's3://research-raw/lab2/inputs/batch-01/observations_a.csv', 381, '5157418915d867980fac8d84551a8b856bba1669ca2e33cef91a15ee82101aea', True)

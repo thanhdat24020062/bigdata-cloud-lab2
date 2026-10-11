@@ -1,0 +1,21 @@
+{
+  "mode": "DRY_RUN_ONLY",
+  "evaluations": [
+    {
+      "dataset": "raw-intake-envelopes",
+      "decision": "KEEP",
+      "reason": "ACTIVE_RELEASE_DEPENDENCY"
+    },
+    {
+      "dataset": "curation-quarantine",
+      "decision": "KEEP",
+      "reason": "RETENTION_WINDOW_NOT_CONFIRMED_EXPIRED"
+    },
+    {
+      "dataset": "approved-release",
+      "decision": "KEEP",
+      "reason": "NOT_YET_PUBLISHED_OR_WITHIN_RETENTION_WINDOW"
+    }
+  ],
+  "destructive_action_executed": false
+}

@@ -1,0 +1,4 @@
+CATALOG VALIDATION: PASS
+dataset_id : curated-candidate
+row_count  : 9610
+columns    : 10
