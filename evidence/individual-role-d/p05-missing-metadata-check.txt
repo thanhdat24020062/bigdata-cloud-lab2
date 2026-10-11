@@ -1,28 +1,7 @@
 Individual Cross-Check - Role D
-
-Checked artifact:
-Role E release gate implementation
-
-Case:
-P05 - Missing metadata steward
-
-Mutation:
-The curated metadata record was modified so that the "steward" field was missing.
-
-Expected result:
-REJECT / METADATA
-
-Observed result:
-REJECT / METADATA
-
-Independent check:
-PASS
-
-Interpretation:
-The Role E release gate correctly rejected a candidate when required metadata was missing.
-
-Reviewer:
-Role D - Metadata
-
-Source:
-Role E branch: task-5-release-gate
+Case: P05 - Missing metadata steward
+Mutation: steward removed
+Expected: REJECT / METADATA
+Observed: REJECT / ['METADATA', 'COVERAGE']
+Interpretation: METADATA rejection correctly detected; COVERAGE was also reported by the current candidate state.
+Independent check: PASS

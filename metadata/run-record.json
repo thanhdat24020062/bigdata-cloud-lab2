@@ -1,0 +1,27 @@
+{
+  "run_uuid": "53adf7e0-6aa0-51ed-af40-43e1b45358a2",
+  "source_curation_run_id": "8c68ba1d",
+  "start_time": "2026-10-10T05:10:47Z",
+  "end_time": "2026-10-10T05:10:50Z",
+  "as_of": "2026-02-09T00:00:00Z",
+  "store_id": "bd-g01-objects",
+  "input_manifest_sha256": "77dacfdb5a8b4e82fb2316990972de731a51b31f9fc052d739d0dea78e992331",
+  "contract_sha256": "2ae350ef4145859db62547c69cc21814cca43320d2e998c8d5a18deaf206a02a",
+  "code_sha256": "7801b24ec80505af059069036fee6da6d936fdafcdc69ced1a8a162735ba87fd",
+  "outputs": {
+    "curated.parquet": "17b163b27ddd5c3a2869252424b39caabef0fce78978bd94a15c9053dc36f9e4",
+    "quarantine.csv": "f40c76db5304c76a61380edb7b6dd2c5476d132a99407e5b504539579b2c8e56",
+    "duplicates.csv": "64eed4baff8e356618572d0beb1a2f738afcd8c4cf3193ebbfd4dddd1c281568"
+  },
+  "operator": "Đạt - Role D Metadata Governance",
+  "reviewer": "Canh - Role E Release",
+  "status": "COMPLETE",
+  "reason": "Curation outputs validated and metadata generated",
+  "software": {
+    "python": "3.11.17",
+    "duckdb": "1.5.6",
+    "boto3": "1.43.109",
+    "jsonschema": "4.26.0",
+    "image": "docker.io/library/lab-client:latest"
+  }
+}

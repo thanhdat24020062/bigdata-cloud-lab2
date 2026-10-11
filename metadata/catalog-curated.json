@@ -2,8 +2,8 @@
   "dataset_id": "curated-candidate",
   "title": "Curated Research Telemetry Dataset",
   "purpose": "Validated and curated synthetic temperature observation dataset produced by the Lab 2 deterministic curation pipeline.",
-  "owner": "bd-g01",
-  "steward": "Role D - Metadata Governance",
+  "owner": "Role E - Release",
+  "steward": "Đạt - Role D Metadata Governance",
   "classification": "internal",
   "allowed_use": "Synthetic teaching data only",
   "location": "/work/candidate/curated.parquet",
@@ -87,10 +87,11 @@
   "code_sha256": "7801b24ec80505af059069036fee6da6d936fdafcdc69ced1a8a162735ba87fd",
   "quality_report": "/work/quality_after.json",
   "retention": {
-    "status": "candidate",
-    "approved_release_days": 90,
-    "legal_hold_override": true,
-    "active_dependency_override": true
+    "days": 90,
+    "start_basis": "publication_time",
+    "hold": false,
+    "dependent_release_ids": [],
+    "action": "dry-run only"
   },
   "provenance": {
     "curation_run_id": "8c68ba1d",
@@ -100,6 +101,11 @@
     "curated_record_count": 9610,
     "quarantine_record_count": 395,
     "duplicate_record_count": 200,
-    "conservation_check": "PASS"
+    "conservation_check": "PASS",
+    "duplicate_ledger": {
+      "location": "/work/candidate/duplicates.csv",
+      "row_count": 200,
+      "sha256": "64eed4baff8e356618572d0beb1a2f738afcd8c4cf3193ebbfd4dddd1c281568"
+    }
   }
 }

@@ -1,0 +1,7 @@
+task,operator,reviewer,command_or_query,run_id,input_version,output_file
+T4-catalog-validation,Dat - Role D,Role E - Release,python3 code/validate_catalog.py,8c68ba1d,research-telemetry-v1,evidence/T4/catalog-curated-validation.txt
+T4-semantic-validation,Dat - Role D,Role E - Release,python3 code/validate_catalog_semantic.py,8c68ba1d,research-telemetry-v1,evidence/T4/catalog-curated-semantic-validation.txt
+T4-accepted-trace,Dat - Role D,peer reviewer,DuckDB source trace,8c68ba1d,research-telemetry-v1,evidence/T4/accepted-trace.txt
+T4-quarantine-trace,Dat - Role D,peer reviewer,DuckDB quarantine trace,8c68ba1d,research-telemetry-v1,evidence/T4/quarantine-trace.txt
+T4-retention,Dat - Role D,Role E - Release,retention dry-run,8c68ba1d,research-telemetry-v1,evidence/T4/retention-dry-run.json
+IND-P05,Dat - Role D,Role E - Release,missing steward release-gate check,8c68ba1d,research-telemetry-v1,evidence/individual-role-d/p05-missing-metadata-check.txt

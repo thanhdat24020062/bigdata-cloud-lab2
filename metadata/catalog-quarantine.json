@@ -2,8 +2,8 @@
   "dataset_id": "curation-quarantine",
   "title": "Curation Quarantine Dataset",
   "purpose": "Restricted curation output containing physical records rejected during parsing, key validation, ingest validation, or winner validation, together with rejection reasons and provenance.",
-  "owner": "bd-g01",
-  "steward": "Role D - Metadata Governance",
+  "owner": "Role E - Release",
+  "steward": "Đạt - Role D Metadata Governance",
   "classification": "restricted-internal",
   "allowed_use": "Synthetic teaching data only",
   "location": "/work/candidate/quarantine.csv",
@@ -73,9 +73,11 @@
   "code_sha256": "7801b24ec80505af059069036fee6da6d936fdafcdc69ced1a8a162735ba87fd",
   "quality_report": "/work/quality_before.json",
   "retention": {
-    "retention_days": 7,
-    "basis": "run_completion",
-    "legal_hold_override": true
+    "days": 7,
+    "start_basis": "run_completion_time",
+    "hold": false,
+    "dependent_release_ids": [],
+    "action": "dry-run only"
   },
   "provenance": {
     "curation_run_id": "8c68ba1d",
