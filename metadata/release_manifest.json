@@ -1,0 +1,14 @@
+{
+  "release_id": "rel-6f8bd670",
+  "approved_run_uuid": "74ae72cc-89f0-4779-8acf-bc21b60171af",
+  "reviewer": "s3-owner",
+  "approval_time": "2026-10-11T05:52:10.641986+00:00",
+  "curated_row_count": 10205,
+  "schema_version": "research-telemetry-v1",
+  "artifacts": [
+    {
+      "key": "curated_data.parquet",
+      "sha256": "30bb88d5232be332992151e6f1596d68dcad003ebdbdfb55e39d7412b3f4abd2"
+    }
+  ]
+}

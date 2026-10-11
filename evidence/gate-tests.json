@@ -1,0 +1,182 @@
+[
+  {
+    "case_id": "P01",
+    "changed_artifact": "Unmodified candidate",
+    "expected_result": "PASS",
+    "actual_result": "REJECT",
+    "measured_failures": [
+      "COVERAGE"
+    ],
+    "operator": "s3-ingestor",
+    "execution_time": "2026-10-11T05:48:30.909570+00:00"
+  },
+  {
+    "case_id": "P02",
+    "changed_artifact": "Set temperature_c to 100.00",
+    "expected_result": "REJECT",
+    "actual_result": "REJECT",
+    "measured_failures": [
+      "COVERAGE",
+      "VALUE"
+    ],
+    "operator": "s3-ingestor",
+    "execution_time": "2026-10-11T05:48:30.951335+00:00"
+  },
+  {
+    "case_id": "P03",
+    "changed_artifact": "Set temperature_c to NULL",
+    "expected_result": "REJECT",
+    "actual_result": "REJECT",
+    "measured_failures": [
+      "REQUIRED",
+      "COVERAGE"
+    ],
+    "operator": "s3-ingestor",
+    "execution_time": "2026-10-11T05:48:31.002589+00:00"
+  },
+  {
+    "case_id": "P04",
+    "changed_artifact": "Append duplicate record",
+    "expected_result": "REJECT",
+    "actual_result": "REJECT",
+    "measured_failures": [
+      "COVERAGE",
+      "UNIQUENESS"
+    ],
+    "operator": "s3-ingestor",
+    "execution_time": "2026-10-11T05:48:31.042811+00:00"
+  },
+  {
+    "case_id": "P05",
+    "changed_artifact": "Remove steward from metadata",
+    "expected_result": "REJECT",
+    "actual_result": "REJECT",
+    "measured_failures": [
+      "COVERAGE",
+      "METADATA"
+    ],
+    "operator": "s3-ingestor",
+    "execution_time": "2026-10-11T05:48:31.065887+00:00"
+  },
+  {
+    "case_id": "P06",
+    "changed_artifact": "Tamper with source copy",
+    "expected_result": "REJECT",
+    "actual_result": "REJECT",
+    "measured_failures": [
+      "COVERAGE",
+      "INPUT_INTEGRITY"
+    ],
+    "operator": "s3-ingestor",
+    "execution_time": "2026-10-11T05:48:31.072093+00:00"
+  },
+  {
+    "case_id": "P07",
+    "changed_artifact": "Remove curation lineage output",
+    "expected_result": "REJECT",
+    "actual_result": "REJECT",
+    "measured_failures": [
+      "LINEAGE",
+      "COVERAGE"
+    ],
+    "operator": "s3-ingestor",
+    "execution_time": "2026-10-11T05:48:31.077847+00:00"
+  },
+  {
+    "case_id": "P08",
+    "changed_artifact": "Remove mismatching QA-sample ID",
+    "expected_result": "REJECT",
+    "actual_result": "REJECT",
+    "measured_failures": [
+      "COVERAGE"
+    ],
+    "operator": "s3-ingestor",
+    "execution_time": "2026-10-11T05:48:31.101214+00:00"
+  },
+  {
+    "case_id": "P01",
+    "changed_artifact": "Unmodified candidate",
+    "expected_result": "PASS",
+    "actual_result": "PASS",
+    "measured_failures": [],
+    "operator": "s3-ingestor",
+    "execution_time": "2026-10-11T05:50:12.512652+00:00"
+  },
+  {
+    "case_id": "P02",
+    "changed_artifact": "Set temperature_c to 100.00",
+    "expected_result": "REJECT",
+    "actual_result": "REJECT",
+    "measured_failures": [
+      "VALUE"
+    ],
+    "operator": "s3-ingestor",
+    "execution_time": "2026-10-11T05:50:12.523417+00:00"
+  },
+  {
+    "case_id": "P03",
+    "changed_artifact": "Set temperature_c to NULL",
+    "expected_result": "REJECT",
+    "actual_result": "REJECT",
+    "measured_failures": [
+      "REQUIRED"
+    ],
+    "operator": "s3-ingestor",
+    "execution_time": "2026-10-11T05:50:12.534933+00:00"
+  },
+  {
+    "case_id": "P04",
+    "changed_artifact": "Append duplicate record",
+    "expected_result": "REJECT",
+    "actual_result": "REJECT",
+    "measured_failures": [
+      "UNIQUENESS"
+    ],
+    "operator": "s3-ingestor",
+    "execution_time": "2026-10-11T05:50:12.546055+00:00"
+  },
+  {
+    "case_id": "P05",
+    "changed_artifact": "Remove steward from metadata",
+    "expected_result": "REJECT",
+    "actual_result": "REJECT",
+    "measured_failures": [
+      "METADATA"
+    ],
+    "operator": "s3-ingestor",
+    "execution_time": "2026-10-11T05:50:12.555829+00:00"
+  },
+  {
+    "case_id": "P06",
+    "changed_artifact": "Tamper with source copy",
+    "expected_result": "REJECT",
+    "actual_result": "REJECT",
+    "measured_failures": [
+      "INPUT_INTEGRITY"
+    ],
+    "operator": "s3-ingestor",
+    "execution_time": "2026-10-11T05:50:12.561285+00:00"
+  },
+  {
+    "case_id": "P07",
+    "changed_artifact": "Remove curation lineage output",
+    "expected_result": "REJECT",
+    "actual_result": "REJECT",
+    "measured_failures": [
+      "LINEAGE"
+    ],
+    "operator": "s3-ingestor",
+    "execution_time": "2026-10-11T05:50:12.566910+00:00"
+  },
+  {
+    "case_id": "P08",
+    "changed_artifact": "Remove mismatching QA-sample ID",
+    "expected_result": "REJECT",
+    "actual_result": "REJECT",
+    "measured_failures": [
+      "COVERAGE"
+    ],
+    "operator": "s3-ingestor",
+    "execution_time": "2026-10-11T05:50:12.576027+00:00"
+  }
+]
