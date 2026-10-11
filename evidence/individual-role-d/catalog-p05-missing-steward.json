@@ -1,0 +1,104 @@
+{
+  "dataset_id": "curated-candidate",
+  "title": "Curated Research Telemetry Dataset",
+  "purpose": "Validated and curated synthetic temperature observation dataset produced by the Lab 2 deterministic curation pipeline.",
+  "owner": "bd-g01",
+  "classification": "internal",
+  "allowed_use": "Synthetic teaching data only",
+  "location": "/work/candidate/curated.parquet",
+  "schema_version": "research-telemetry-v1",
+  "as_of": "2026-02-09T00:00:00Z",
+  "row_count": 9610,
+  "columns": [
+    {
+      "name": "record_id",
+      "type": "VARCHAR",
+      "meaning": "Unique logical identifier of the observation record.",
+      "unit": null,
+      "nullable": false
+    },
+    {
+      "name": "sensor_id",
+      "type": "VARCHAR",
+      "meaning": "Identifier of the sensor that produced the observation.",
+      "unit": null,
+      "nullable": false
+    },
+    {
+      "name": "site",
+      "type": "VARCHAR",
+      "meaning": "Site associated with the sensor according to the sensor registry.",
+      "unit": null,
+      "nullable": false
+    },
+    {
+      "name": "event_time_utc",
+      "type": "TIMESTAMP",
+      "meaning": "UTC timestamp when the observation event occurred.",
+      "unit": null,
+      "nullable": false
+    },
+    {
+      "name": "ingest_time_utc",
+      "type": "TIMESTAMP",
+      "meaning": "UTC timestamp when the observation was ingested.",
+      "unit": null,
+      "nullable": false
+    },
+    {
+      "name": "temperature_c",
+      "type": "DECIMAL(8,2)",
+      "meaning": "Validated temperature measurement in degrees Celsius.",
+      "unit": "Celsius",
+      "nullable": false
+    },
+    {
+      "name": "is_late",
+      "type": "BOOLEAN",
+      "meaning": "Indicates whether the valid observation arrived later than the configured timeliness threshold.",
+      "unit": null,
+      "nullable": false
+    },
+    {
+      "name": "source_object",
+      "type": "VARCHAR",
+      "meaning": "Original source object from which the observation originated.",
+      "unit": null,
+      "nullable": false
+    },
+    {
+      "name": "source_row",
+      "type": "BIGINT",
+      "meaning": "Physical row number of the observation within the original source object.",
+      "unit": null,
+      "nullable": false
+    },
+    {
+      "name": "source_sha256",
+      "type": "VARCHAR",
+      "meaning": "SHA-256 digest of the original source object used for provenance verification.",
+      "unit": null,
+      "nullable": false
+    }
+  ],
+  "input_manifest_sha256": "77dacfdb5a8b4e82fb2316990972de731a51b31f9fc052d739d0dea78e992331",
+  "contract_sha256": "2ae350ef4145859db62547c69cc21814cca43320d2e998c8d5a18deaf206a02a",
+  "code_sha256": "7801b24ec80505af059069036fee6da6d936fdafcdc69ced1a8a162735ba87fd",
+  "quality_report": "/work/quality_after.json",
+  "retention": {
+    "status": "candidate",
+    "approved_release_days": 90,
+    "legal_hold_override": true,
+    "active_dependency_override": true
+  },
+  "provenance": {
+    "curation_run_id": "8c68ba1d",
+    "quality_run_id": "4bc359b0-ae6c-42ba-bad6-ee486c88cb61",
+    "output_sha256": "17b163b27ddd5c3a2869252424b39caabef0fce78978bd94a15c9053dc36f9e4",
+    "raw_record_count": 10205,
+    "curated_record_count": 9610,
+    "quarantine_record_count": 395,
+    "duplicate_record_count": 200,
+    "conservation_check": "PASS"
+  }
+}

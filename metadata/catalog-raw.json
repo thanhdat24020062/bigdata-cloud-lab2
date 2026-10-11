@@ -2,9 +2,9 @@
   "dataset_id": "raw-intake-envelopes",
   "title": "Raw Intake Observation Envelopes",
   "purpose": "Staged representation of all physical Lab 2 observation records, preserving source identity, source row, source hash, parse status, and raw payload for complete accounting and provenance.",
-  "owner": "bd-g01",
-  "steward": "Role D - Metadata Governance",
-  "classification": "internal",
+  "owner": "Role E - Release",
+  "steward": "Đạt - Role D Metadata Governance",
+  "classification": "restricted-internal",
   "allowed_use": "Synthetic teaching data only",
   "location": "/work/envelopes.csv",
   "schema_version": "research-telemetry-v1",
@@ -101,10 +101,11 @@
   "code_sha256": "7801b24ec80505af059069036fee6da6d936fdafcdc69ced1a8a162735ba87fd",
   "quality_report": "/work/quality_before.json",
   "retention": {
-    "retention_days": 30,
-    "basis": "retrieval_time",
-    "legal_hold_override": true,
-    "active_dependency_override": true
+    "days": 30,
+    "start_basis": "retrieval_time",
+    "hold": false,
+    "dependent_release_ids": [],
+    "action": "dry-run only"
   },
   "provenance": {
     "artifact_sha256": "28d633f05801d9c4e4a4de02a6a71d8227152a26df4e22151f2b29cda9f50cc7",

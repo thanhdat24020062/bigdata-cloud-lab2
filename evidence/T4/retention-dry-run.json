@@ -1,21 +1,38 @@
 {
   "mode": "DRY_RUN_ONLY",
-  "evaluations": [
+  "destructive_action_executed": false,
+  "decisions": [
     {
-      "dataset": "raw-intake-envelopes",
-      "decision": "KEEP",
-      "reason": "ACTIVE_RELEASE_DEPENDENCY"
+      "case": "expired_scratch_no_hold_no_dependency",
+      "expired": true,
+      "legal_hold": false,
+      "active_dependency": false,
+      "decision": "ELIGIBLE",
+      "reason": "RETENTION_EXPIRED"
     },
     {
-      "dataset": "curation-quarantine",
+      "case": "expired_quarantine_under_hold",
+      "expired": true,
+      "legal_hold": true,
+      "active_dependency": false,
       "decision": "KEEP",
-      "reason": "RETENTION_WINDOW_NOT_CONFIRMED_EXPIRED"
+      "reason": "HOLD"
     },
     {
-      "dataset": "approved-release",
+      "case": "expired_raw_with_active_release_dependency",
+      "expired": true,
+      "legal_hold": false,
+      "active_dependency": true,
       "decision": "KEEP",
-      "reason": "NOT_YET_PUBLISHED_OR_WITHIN_RETENTION_WINDOW"
+      "reason": "ACTIVE_DEPENDENCY"
+    },
+    {
+      "case": "unexpired_object",
+      "expired": false,
+      "legal_hold": false,
+      "active_dependency": false,
+      "decision": "KEEP",
+      "reason": "NOT_EXPIRED"
     }
-  ],
-  "destructive_action_executed": false
+  ]
 }

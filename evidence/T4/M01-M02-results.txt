@@ -1,0 +1,17 @@
+=== M01 ===
+M01: PASS
+dataset_id: curated-candidate
+owner: Role E - Release
+steward: Đạt - Role D Metadata Governance
+row_count: 9610
+location: /work/candidate/curated.parquet
+schema_version: research-telemetry-v1
+
+=== M02 ===
+restricted datasets:
+- raw-intake-envelopes
+- curation-quarantine
+raw restricted: True
+quarantine restricted: True
+release schema contains email: False
+M02: PASS

@@ -1,0 +1,29 @@
+M03 Consumer Test
+
+Reviewer: Canh
+Artifacts provided:
+- metadata/catalog.json
+- docs/README-role-d.md
+- metadata/release_manifest.json
+
+Question 1: What is the unit of temperature_c?
+Answer: Celsius
+Result: PASS
+
+Question 2: What is the reference population?
+Answer: 100 QA reference records
+Result: PASS
+
+Question 3: What is the evaluation cutoff?
+Answer: 2026-02-09T00:00:00Z
+Result: PASS
+
+Question 4: What is a known limitation?
+Answer: Reference agreement only evaluates the supplied QA sample and does not prove accuracy for every sensor observation.
+Result: PASS
+
+Question 5: Who is the contact role / steward?
+Answer: Đạt - Role D Metadata Governance
+Result: PASS
+
+Overall result: PASS

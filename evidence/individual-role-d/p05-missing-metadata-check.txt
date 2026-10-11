@@ -1,0 +1,7 @@
+Individual Cross-Check - Role D
+Case: P05 - Missing metadata steward
+Mutation: steward removed
+Expected: REJECT / METADATA
+Observed: REJECT / ['METADATA', 'COVERAGE']
+Interpretation: METADATA rejection correctly detected; COVERAGE was also reported by the current candidate state.
+Independent check: PASS
