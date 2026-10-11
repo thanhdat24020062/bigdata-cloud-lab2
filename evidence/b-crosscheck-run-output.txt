@@ -1,0 +1,74 @@
+=== duckdb ===
+1.5.5
+=== run_before ===
+==> DA TAO FILE quality_before.json THANH CONG!
+
+==> 5 Mau Defect de lam bao cao loi:
+('REQUIRED', 's3://research-raw/lab2/inputs/batch-01/observations_a.csv', 7)
+('REQUIRED', 's3://research-raw/lab2/inputs/batch-01/observations_a.csv', 25)
+('REQUIRED', 's3://research-raw/lab2/inputs/batch-01/observations_a.csv', 47)
+('REQUIRED', 's3://research-raw/lab2/inputs/batch-01/observations_a.csv', 50)
+('REQUIRED', 's3://research-raw/lab2/inputs/batch-01/observations_a.csv', 61)
+=== run_after ===
+1. Dang doc cac file output cua Role C...
+2. Dang do luong Quality AFTER...
+3. Dang xuat JSON...
+==> DA TAO FILE quality_after.json THANH CONG!
+
+=======================================================
+==> CROSS-CHECK CONSERVATION CHO ROLE C:
+raw_n: 10205
+out_n: 10205
+lost_n: 0
+invented_n: 0
+overlap_or_dup_n: 0
+curated_dup_id_n: 0
+=======================================================
+=== crosscheck ===
+{
+  "check": "role-B independent recompute of role-C conservation/uniqueness",
+  "operator": "24020044",
+  "reviewer_of_artifact_owner": "24020107",
+  "executed_at_utc": "2026-10-11T14:03:54.711886+00:00",
+  "duckdb_version": "1.5.5",
+  "candidate_sha256": {
+    "curated.parquet": "17b163b27ddd5c3a2869252424b39caabef0fce78978bd94a15c9053dc36f9e4",
+    "quarantine.csv": "f40c76db5304c76a61380edb7b6dd2c5476d132a99407e5b504539579b2c8e56",
+    "duplicates.csv": "64eed4baff8e356618572d0beb1a2f738afcd8c4cf3193ebbfd4dddd1c281568"
+  },
+  "observed": {
+    "raw_n": 10205,
+    "curated_n": 9610,
+    "quarantine_n": 395,
+    "duplicates_n": 200,
+    "sum_matches": true,
+    "lost_n": 0,
+    "invented_n": 0,
+    "overlap_c_q": 0,
+    "overlap_c_d": 0,
+    "overlap_q_d": 0,
+    "dup_phys_in_curated": 0,
+    "dup_phys_in_quarantine": 0,
+    "dup_phys_in_duplicates": 0,
+    "dup_record_id_curated": 0,
+    "winners_not_in_curated_or_quarantine": 0,
+    "curated_or_quarantine_not_in_winners": 45,
+    "pre_key_expected": 45,
+    "superseded_missing_from_duplicates": 0,
+    "duplicates_not_superseded": 0
+  },
+  "checks": {
+    "C01_counts_sum": true,
+    "C01_no_loss_no_invention": true,
+    "C01_pairwise_disjoint": true,
+    "C01_unique_physical_ids": true,
+    "C01_curated_record_id_unique": true,
+    "B_every_winner_disposed": true,
+    "B_non_winners_are_pre_key": true,
+    "B_duplicates_equal_superseded": true
+  },
+  "PASS": true
+}
+=== reproducibility vs repo evidence ===
+BEFORE_SAME
+AFTER_SAME

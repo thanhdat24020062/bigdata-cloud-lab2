@@ -1,0 +1,8 @@
+*.pem
+*.duckdb
+envelopes.csv
+quarantine.csv
+duplicates.csv
+snapshot/
+history*.txt
+b_files/
