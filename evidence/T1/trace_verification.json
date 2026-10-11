@@ -1,0 +1,11 @@
+{
+  "verifier": "Role A",
+  "target_role": "Role D",
+  "test_name": "source_to_output_trace",
+  "status": "PASS",
+  "tested_record_id": "REC-001042",
+  "traced_source_object": "s3://research-raw/lab2/inputs/batch-01/observations_a.csv",
+  "traced_source_row": 1042,
+  "verified_at": "2026-10-11T11:20:00Z",
+  "notes": "Verified that Role D's lineage mechanism correctly traces a release record back to the exact source file and row number ingested in Task 1."
+}

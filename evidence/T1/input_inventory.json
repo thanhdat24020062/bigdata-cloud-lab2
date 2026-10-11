@@ -1,0 +1,26 @@
+[
+  {
+    "store_id": "bd-gXX-objects",
+    "key": "lab2/inputs/batch-01/observations_a.csv",
+    "records": 5000,
+    "sha256": "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92"
+  },
+  {
+    "store_id": "bd-gXX-objects",
+    "key": "lab2/inputs/batch-01/observations_b.jsonl",
+    "records": 5205,
+    "sha256": "3a7bd3e2360a3d29eea436fcfb7e44c735d117c42d1c1835420b6b9942dd4f1b"
+  },
+  {
+    "store_id": "bd-gXX-objects",
+    "key": "lab2/inputs/batch-01/sensors.csv",
+    "records": 100,
+    "sha256": "f2ca1bb6c7e907d06dafe4687e579fce76b37e4e93b7605022da52e6ccc26fd2"
+  },
+  {
+    "store_id": "bd-gXX-objects",
+    "key": "lab2/inputs/batch-01/qa_reference.csv",
+    "records": 50,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+]

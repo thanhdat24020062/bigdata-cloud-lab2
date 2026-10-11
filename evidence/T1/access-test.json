@@ -1,0 +1,7 @@
+{
+  "test_id": 104,
+  "status": "PASS",
+  "raw_get_result": "SUCCESS_200",
+  "release_put_result": "DENIED_AccessDenied",
+  "identity": "s3-ingestor"
+}
