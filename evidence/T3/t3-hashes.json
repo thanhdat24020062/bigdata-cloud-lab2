@@ -1,0 +1,17 @@
+{
+  "run_id": "8c68ba1d",
+  "contract_sha256": "2ae350ef4145859db62547c69cc21814cca43320d2e998c8d5a18deaf206a02a",
+  "trusted_manifest_sha256": "77dacfdb5a8b4e82fb2316990972de731a51b31f9fc052d739d0dea78e992331",
+  "envelopes_sha256": "28d633f05801d9c4e4a4de02a6a71d8227152a26df4e22151f2b29cda9f50cc7",
+  "code_files_sha256": {
+    "curate.sql": "6262c06ada5466c471d440e9780aae5c637b3d222fb6ef91c8b9f470a4f803e4",
+    "run_curate.py": "1c6a1798f44853f4777cff13a0fc7d83889184d5178467a70aaf30d97537ba1b",
+    "typed.sql": "4a53e54795bcd2d7a8f7dd9a68894db73d66d724b2086fbbc173439c2f6ec58a"
+  },
+  "code_bundle_sha256": "7801b24ec80505af059069036fee6da6d936fdafcdc69ced1a8a162735ba87fd",
+  "output_sha256": {
+    "curated.parquet": "17b163b27ddd5c3a2869252424b39caabef0fce78978bd94a15c9053dc36f9e4",
+    "quarantine.csv": "f40c76db5304c76a61380edb7b6dd2c5476d132a99407e5b504539579b2c8e56",
+    "duplicates.csv": "64eed4baff8e356618572d0beb1a2f738afcd8c4cf3193ebbfd4dddd1c281568"
+  }
+}

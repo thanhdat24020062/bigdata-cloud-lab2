@@ -1,0 +1,92 @@
+[
+  {
+    "test": "C04.1  32F -> 0.00 retained, blank email OK",
+    "PASS": true,
+    "detail": "('R000001', Decimal('0.00'), False, 'Hanoi', 's3://x/observations_a.csv', 1)"
+  },
+  {
+    "test": "C04.2a unit K quarantined (UNIT)",
+    "PASS": true,
+    "detail": "('s3://x/observations_a.csv', '2', 'UNIT', 'UNIT|RANGE')"
+  },
+  {
+    "test": "C04.2b nan quarantined (NUMERIC)",
+    "PASS": true,
+    "detail": "('s3://x/observations_a.csv', '3', 'NUMERIC', 'NUMERIC|RANGE')"
+  },
+  {
+    "test": "C04.4a newer invalid winner quarantined (RANGE)",
+    "PASS": true,
+    "detail": "('s3://x/observations_b.jsonl', '1', 'RANGE', 'RANGE')"
+  },
+  {
+    "test": "C04.4b older valid version -> duplicates, not curated",
+    "PASS": true,
+    "detail": "('s3://x/observations_a.csv', '4', 's3://x/observations_b.jsonl', '1')"
+  },
+  {
+    "test": "late row retained, is_late=true",
+    "PASS": true,
+    "detail": "('R000005', Decimal('20.00'), True, 'Hanoi', 's3://x/observations_a.csv', 5)"
+  },
+  {
+    "test": "PARSE primary",
+    "PASS": true,
+    "detail": "('s3://x/observations_a.csv', '6', 'PARSE', 'PARSE|KEY|INGEST_PARSE')"
+  },
+  {
+    "test": "KEY primary",
+    "PASS": true,
+    "detail": "('s3://x/observations_a.csv', '7', 'KEY', 'KEY')"
+  },
+  {
+    "test": "INGEST_PARSE primary",
+    "PASS": true,
+    "detail": "('s3://x/observations_a.csv', '8', 'INGEST_PARSE', 'INGEST_PARSE')"
+  },
+  {
+    "test": "tie: lower source_object wins",
+    "PASS": true,
+    "detail": "(('R000009', Decimal('20.00'), False, 'Hanoi', 's3://x/observations_a.csv', 9), ('s3://x/observations_b.jsonl', '2', 's3://x/observations_a.csv', '9'))"
+  },
+  {
+    "test": "unknown sensor -> REFERENCE",
+    "PASS": true,
+    "detail": "('s3://x/observations_a.csv', '10', 'REFERENCE', 'REFERENCE')"
+  },
+  {
+    "test": "event>ingest -> TIME_ORDER",
+    "PASS": true,
+    "detail": "('s3://x/observations_a.csv', '11', 'TIME_ORDER', 'TIME_ORDER')"
+  },
+  {
+    "test": "normalization retained R000012 with site",
+    "PASS": true,
+    "detail": "('R000012', Decimal('20.00'), False, 'Hanoi', 's3://x/observations_a.csv', 12)"
+  },
+  {
+    "test": "ingest after AS_OF -> TIME_ORDER",
+    "PASS": true,
+    "detail": "('s3://x/observations_a.csv', '13', 'TIME_ORDER', 'TIME_ORDER')"
+  },
+  {
+    "test": "missing reading -> REQUIRED primary",
+    "PASS": true,
+    "detail": "('s3://x/observations_a.csv', '14', 'REQUIRED', 'REQUIRED|NUMERIC|RANGE')"
+  },
+  {
+    "test": "C01 conservation on fixture",
+    "PASS": true,
+    "detail": "{'n_raw': 16, 'n_curated': 4, 'n_quarantine': 10, 'n_duplicates': 2, 'raw_minus_outputs': 0, 'outputs_minus_raw': 0, 'overlap_c_q': 0, 'overlap_c_d': 0, 'overlap_q_d': 0, 'dup_phys_in_outputs': 0, 'dup_record_id_curated': 0, 'sum_matches': True, 'PASS': True}"
+  },
+  {
+    "test": "C03 schema/privacy on fixture",
+    "PASS": true,
+    "detail": "[('record_id', 'VARCHAR'), ('sensor_id', 'VARCHAR'), ('site', 'VARCHAR'), ('event_time_utc', 'TIMESTAMP'), ('ingest_time_utc', 'TIMESTAMP'), ('temperature_c', 'DECIMAL(8,2)'), ('is_late', 'BOOLEAN'), ('source_object', 'VARCHAR'), ('source_row', 'BIGINT'), ('source_sha256', 'VARCHAR')]"
+  },
+  {
+    "test": "C02 replay equivalence on fixture",
+    "PASS": true,
+    "detail": ""
+  }
+]

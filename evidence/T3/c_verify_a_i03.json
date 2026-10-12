@@ -1,0 +1,34 @@
+{
+  "status": "PARTIAL",
+  "reference": "Lab2-datasets.zip (trusted_manifest.json trong /work bi ghi de luc 11/10 05:50, khong dung duoc)",
+  "tamper_tests": [
+    {
+      "object": "observations_a.csv",
+      "original_before": "OK",
+      "tampered_copy": "INPUT_INTEGRITY",
+      "original_after": "OK",
+      "PASS": true
+    },
+    {
+      "object": "observations_b.jsonl",
+      "original_before": "OK",
+      "tampered_copy": "INPUT_INTEGRITY",
+      "original_after": "OK",
+      "PASS": true
+    },
+    {
+      "object": "sensors.csv",
+      "original_before": "OK",
+      "tampered_copy": "INPUT_INTEGRITY",
+      "original_after": "OK",
+      "PASS": true
+    },
+    {
+      "object": "qa_reference.csv",
+      "original_before": "OK",
+      "tampered_copy": "INPUT_INTEGRITY",
+      "original_after": "OK",
+      "PASS": true
+    }
+  ]
+}
