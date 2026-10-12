@@ -1,0 +1,101 @@
+{
+  "run_id": "8c68ba1d",
+  "curate_run_id": "8c68ba1d",
+  "contract_version": "research-telemetry-v1",
+  "as_of": "2026-02-09T00:00:00Z",
+  "store_id": "bd-g01-objects",
+  "input_manifest_sha256": "77dacfdb5a8b4e82fb2316990972de731a51b31f9fc052d739d0dea78e992331",
+  "contract_sha256": "2ae350ef4145859db62547c69cc21814cca43320d2e998c8d5a18deaf206a02a",
+  "code_sha256": "7801b24ec80505af059069036fee6da6d936fdafcdc69ced1a8a162735ba87fd",
+  "checkpoint": "minute-60",
+  "raw_inventory": {
+    "raw_total": 10205,
+    "parse_failures": 5,
+    "key_rejected": 20,
+    "ingest_parse_rejected": 20,
+    "key_eligible": 10160,
+    "winners_W": 9960,
+    "duplicate_excess": 200,
+    "required_fail_parsed_intake": 130
+  },
+  "metrics": [
+    {
+      "rule_id": "Q_REQUIRED",
+      "dataset_id": "pre-curated",
+      "cohort": "W: winners tr\u01b0\u1edbc row-validity",
+      "numerator": 9850,
+      "denominator": 9960,
+      "value": 0.989,
+      "threshold": 1.0,
+      "severity": "BLOCK",
+      "status": "EVALUATED",
+      "run_id": "8c68ba1d",
+      "contract_version": "research-telemetry-v1"
+    },
+    {
+      "rule_id": "Q_UNIQUE",
+      "dataset_id": "pre-curated",
+      "cohort": "key-eligible tr\u01b0\u1edbc dedup (distinct record_id / rows)",
+      "numerator": 9960,
+      "denominator": 10160,
+      "value": 0.9803,
+      "threshold": 1.0,
+      "severity": "BLOCK",
+      "status": "EVALUATED",
+      "run_id": "8c68ba1d",
+      "contract_version": "research-telemetry-v1"
+    },
+    {
+      "rule_id": "Q_VALUE",
+      "dataset_id": "pre-curated",
+      "cohort": "W before curation",
+      "numerator": 9710,
+      "denominator": 9960,
+      "value": 0.9749,
+      "threshold": 1.0,
+      "severity": "BLOCK",
+      "status": "EVALUATED",
+      "run_id": "8c68ba1d",
+      "contract_version": "research-telemetry-v1"
+    },
+    {
+      "rule_id": "Q_REFINT",
+      "dataset_id": "pre-curated",
+      "cohort": "W before curation",
+      "numerator": 9930,
+      "denominator": 9960,
+      "value": 0.997,
+      "threshold": 1.0,
+      "severity": "BLOCK",
+      "status": "EVALUATED",
+      "run_id": "8c68ba1d",
+      "contract_version": "research-telemetry-v1"
+    },
+    {
+      "rule_id": "Q_TIME",
+      "dataset_id": "pre-curated",
+      "cohort": "W before curation",
+      "numerator": 9890,
+      "denominator": 9960,
+      "value": 0.993,
+      "threshold": 1.0,
+      "severity": "BLOCK",
+      "status": "EVALUATED",
+      "run_id": "8c68ba1d",
+      "contract_version": "research-telemetry-v1"
+    },
+    {
+      "rule_id": "Q_TIMELY",
+      "dataset_id": "pre-curated",
+      "cohort": "W rows v\u1edbi event<=ingest<=AS_OF",
+      "numerator": 9690,
+      "denominator": 9890,
+      "value": 0.9798,
+      "threshold": 0.95,
+      "severity": "BLOCK",
+      "status": "EVALUATED",
+      "run_id": "8c68ba1d",
+      "contract_version": "research-telemetry-v1"
+    }
+  ]
+}

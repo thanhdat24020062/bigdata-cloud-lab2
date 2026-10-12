@@ -1,0 +1,151 @@
+{
+  "PASS": true,
+  "duckdb": "1.5.5",
+  "results": [
+    {
+      "test": "fixture_Q_REQUIRED",
+      "passed": true,
+      "observed": [
+        7,
+        8
+      ],
+      "expected": [
+        7,
+        8
+      ]
+    },
+    {
+      "test": "fixture_Q_UNIQUE",
+      "passed": true,
+      "observed": [
+        8,
+        9
+      ],
+      "expected": [
+        8,
+        9
+      ]
+    },
+    {
+      "test": "fixture_Q_VALUE",
+      "passed": true,
+      "observed": [
+        4,
+        8
+      ],
+      "expected": [
+        4,
+        8
+      ]
+    },
+    {
+      "test": "fixture_Q_REFINT",
+      "passed": true,
+      "observed": [
+        7,
+        8
+      ],
+      "expected": [
+        7,
+        8
+      ]
+    },
+    {
+      "test": "fixture_Q_TIME",
+      "passed": true,
+      "observed": [
+        7,
+        8
+      ],
+      "expected": [
+        7,
+        8
+      ]
+    },
+    {
+      "test": "fixture_Q_TIMELY",
+      "passed": true,
+      "observed": [
+        6,
+        7
+      ],
+      "expected": [
+        6,
+        7
+      ]
+    },
+    {
+      "test": "fixture_intake_counts",
+      "passed": true,
+      "observed": [
+        10,
+        1,
+        9,
+        8,
+        1
+      ],
+      "expected": [
+        10,
+        1,
+        9,
+        8,
+        1
+      ]
+    },
+    {
+      "test": "newer_invalid_version_wins",
+      "passed": true,
+      "observed": [
+        [
+          9
+        ]
+      ],
+      "expected": [
+        [
+          9
+        ]
+      ]
+    },
+    {
+      "test": "zero_denominator_not_evaluated",
+      "passed": true,
+      "observed": {
+        "Q_REQUIRED": "NOT_EVALUATED",
+        "Q_UNIQUE": "NOT_EVALUATED",
+        "Q_VALUE": "NOT_EVALUATED",
+        "Q_REFINT": "NOT_EVALUATED",
+        "Q_TIME": "NOT_EVALUATED",
+        "Q_TIMELY": "NOT_EVALUATED"
+      },
+      "expected": "all NOT_EVALUATED, value NULL"
+    },
+    {
+      "test": "negative_control_total_matches_but_defect_caught",
+      "passed": true,
+      "observed": {
+        "totals_equal": true,
+        "lost": 1,
+        "duplicated": 1
+      },
+      "expected": {
+        "totals_equal": true,
+        "lost": 1,
+        "duplicated": 1
+      }
+    },
+    {
+      "test": "positive_control_clean_partition",
+      "passed": true,
+      "observed": {
+        "totals_equal": true,
+        "lost": 0,
+        "duplicated": 0
+      },
+      "expected": {
+        "totals_equal": true,
+        "lost": 0,
+        "duplicated": 0
+      }
+    }
+  ]
+}

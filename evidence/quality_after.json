@@ -1,0 +1,122 @@
+{
+  "run_id": "8c68ba1d",
+  "curate_run_id": "8c68ba1d",
+  "contract_version": "research-telemetry-v1",
+  "as_of": "2026-02-09T00:00:00Z",
+  "store_id": "bd-g01-objects",
+  "input_manifest_sha256": "77dacfdb5a8b4e82fb2316990972de731a51b31f9fc052d739d0dea78e992331",
+  "contract_sha256": "2ae350ef4145859db62547c69cc21814cca43320d2e998c8d5a18deaf206a02a",
+  "code_sha256": "7801b24ec80505af059069036fee6da6d936fdafcdc69ced1a8a162735ba87fd",
+  "candidate_sha256": {
+    "curated.parquet": "17b163b27ddd5c3a2869252424b39caabef0fce78978bd94a15c9053dc36f9e4",
+    "quarantine.csv": "f40c76db5304c76a61380edb7b6dd2c5476d132a99407e5b504539579b2c8e56",
+    "duplicates.csv": "64eed4baff8e356618572d0beb1a2f738afcd8c4cf3193ebbfd4dddd1c281568"
+  },
+  "checkpoint": "post-curation",
+  "metrics": [
+    {
+      "rule_id": "Q_REQUIRED",
+      "dataset_id": "curated-candidate",
+      "cohort": "curated candidate",
+      "numerator": 9610,
+      "denominator": 9610,
+      "value": 1.0,
+      "threshold": 1.0,
+      "severity": "BLOCK",
+      "status": "EVALUATED",
+      "run_id": "8c68ba1d",
+      "contract_version": "research-telemetry-v1"
+    },
+    {
+      "rule_id": "Q_UNIQUE",
+      "dataset_id": "curated-candidate",
+      "cohort": "curated candidate (distinct record_id / rows)",
+      "numerator": 9610,
+      "denominator": 9610,
+      "value": 1.0,
+      "threshold": 1.0,
+      "severity": "BLOCK",
+      "status": "EVALUATED",
+      "run_id": "8c68ba1d",
+      "contract_version": "research-telemetry-v1"
+    },
+    {
+      "rule_id": "Q_VALUE",
+      "dataset_id": "curated-candidate",
+      "cohort": "curated candidate",
+      "numerator": 9610,
+      "denominator": 9610,
+      "value": 1.0,
+      "threshold": 1.0,
+      "severity": "BLOCK",
+      "status": "EVALUATED",
+      "run_id": "8c68ba1d",
+      "contract_version": "research-telemetry-v1"
+    },
+    {
+      "rule_id": "Q_REFINT",
+      "dataset_id": "curated-candidate",
+      "cohort": "curated candidate",
+      "numerator": 9610,
+      "denominator": 9610,
+      "value": 1.0,
+      "threshold": 1.0,
+      "severity": "BLOCK",
+      "status": "EVALUATED",
+      "run_id": "8c68ba1d",
+      "contract_version": "research-telemetry-v1"
+    },
+    {
+      "rule_id": "Q_TIME",
+      "dataset_id": "curated-candidate",
+      "cohort": "curated candidate",
+      "numerator": 9610,
+      "denominator": 9610,
+      "value": 1.0,
+      "threshold": 1.0,
+      "severity": "BLOCK",
+      "status": "EVALUATED",
+      "run_id": "8c68ba1d",
+      "contract_version": "research-telemetry-v1"
+    },
+    {
+      "rule_id": "Q_TIMELY",
+      "dataset_id": "curated-candidate",
+      "cohort": "curated rows v\u1edbi event<=ingest<=AS_OF",
+      "numerator": 9410,
+      "denominator": 9610,
+      "value": 0.9792,
+      "threshold": 0.95,
+      "severity": "BLOCK",
+      "status": "EVALUATED",
+      "run_id": "8c68ba1d",
+      "contract_version": "research-telemetry-v1"
+    },
+    {
+      "rule_id": "Q_REF_AGREE",
+      "dataset_id": "curated-candidate",
+      "cohort": "matched reference IDs",
+      "numerator": 95,
+      "denominator": 100,
+      "value": 0.95,
+      "threshold": 0.95,
+      "severity": "BLOCK",
+      "status": "EVALUATED",
+      "run_id": "8c68ba1d",
+      "contract_version": "research-telemetry-v1"
+    },
+    {
+      "rule_id": "Q_REF_COVERAGE",
+      "dataset_id": "curated-candidate",
+      "cohort": "all 100 reference IDs",
+      "numerator": 100,
+      "denominator": 100,
+      "value": 1.0,
+      "threshold": 1.0,
+      "severity": "BLOCK",
+      "status": "EVALUATED",
+      "run_id": "8c68ba1d",
+      "contract_version": "research-telemetry-v1"
+    }
+  ]
+}
